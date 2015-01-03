@@ -6,8 +6,11 @@
   "directories": {
     "test": "test"
   },
+  "bin": {
+    "callers": "bin/cli.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jscs -p google index.js test/test.js && mocha test/test.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +29,8 @@
   },
   "homepage": "https://github.com/mrjoelkemp/node-callers",
   "dependencies": {
-    "dependents": "~2.0.4"
+    "commander": "~2.6.0",
+    "dependents": "~2.0.4",
+    "is-calling-function": "~1.0.2"
   }
 }

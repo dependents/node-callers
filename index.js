@@ -1,21 +1,29 @@
 var dependents = require('dependents');
 var isCallingFunction = require('is-calling-function');
+var fs = require('fs');
 
 module.exports = function(options) {
-  var success = options.success;
-
-  options.success = function(err, dependents) {
+  getDependents(options, function(err, dependents) {
     var callers = dependents.filter(function(dependent) {
-      return isCallingFunction(dependent, functionName);
+      var content = fs.readFileSync(dependent, 'utf8');
+      return isCallingFunction(content, options.functionName);
     });
 
     if (err) {
-      success(err);
+      options.success(err);
       return;
     }
 
-    success(null, callers);
-  };
-
-  dependents(options);
+    options.success(null, callers);
+  });
 };
+
+function getDependents(options, cb) {
+  dependents({
+    filename: options.filename,
+    directory: options.directory,
+    config: options.config,
+    exclude: options.exclude,
+    success: cb
+  });
+}
