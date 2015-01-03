@@ -1,0 +1,31 @@
+{
+  "name": "callers",
+  "version": "1.0.0",
+  "description": "Get the modules that call a function of another module",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrjoelkemp/node-callers.git"
+  },
+  "keywords": [
+    "function",
+    "module",
+    "caller",
+    "dependents"
+  ],
+  "author": "Joel Kemp <joel@mrjoelkemp.com> (http://www.mrjoelkemp.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrjoelkemp/node-callers/issues"
+  },
+  "homepage": "https://github.com/mrjoelkemp/node-callers",
+  "dependencies": {
+    "dependents": "~2.0.4"
+  }
+}
