@@ -31,6 +31,6 @@
   "dependencies": {
     "commander": "~2.6.0",
     "dependents": "~2.0.4",
-    "is-calling-function": "~1.0.2"
+    "is-calling-function": "~1.0.3"
   }
 }
