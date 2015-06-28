@@ -32,5 +32,9 @@
     "commander": "~2.6.0",
     "dependents": "~2.0.4",
     "is-calling-function": "~1.0.3"
+  },
+  "devDependencies": {
+    "jscs": "~1.13.1",
+    "mocha": "~2.2.5"
   }
 }
