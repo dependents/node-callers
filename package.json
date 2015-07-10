@@ -1,6 +1,6 @@
 {
   "name": "callers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the modules that call a function of another module",
   "main": "index.js",
   "directories": {
