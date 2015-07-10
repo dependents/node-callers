@@ -23,7 +23,6 @@ function getDependents(options, cb) {
     filename: options.filename,
     directory: options.directory,
     config: options.config,
-    exclude: options.exclude,
-    success: cb
-  });
+    exclude: options.exclude
+  }, cb);
 }
